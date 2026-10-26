@@ -1136,7 +1136,8 @@
     "crawling_in_progress": "Henter sideinnhold …",
     "continue_reading": "Fortsett der du slapp",
     "continue_reading_percent": "Fortsett der du slapp ({{percent}} %)",
-    "continue_button": "Fortsett"
+    "continue_button": "Fortsett",
+    "similar_articles": "Lignende artikler"
   },
   "dialogs": {
     "bookmarks": {

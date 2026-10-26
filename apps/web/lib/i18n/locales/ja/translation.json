@@ -1038,7 +1038,8 @@
     "crawling_in_progress": "ページコンテンツを取得中…",
     "continue_reading": "続きから再開",
     "continue_reading_percent": "続きから再開（{{percent}}%）",
-    "continue_button": "続ける"
+    "continue_button": "続ける",
+    "similar_articles": "類似記事"
   },
   "editor": {
     "multiple_urls_dialog_title": "URLを個別のブックマークとしてインポートしますか？",

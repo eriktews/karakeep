@@ -1043,7 +1043,8 @@
     "crawling_in_progress": "A obter o conteúdo da página…",
     "continue_reading": "Continuar de onde parou",
     "continue_reading_percent": "Continuar de onde parou ({{percent}}%)",
-    "continue_button": "Continuar"
+    "continue_button": "Continuar",
+    "similar_articles": "Artigos semelhantes"
   },
   "editor": {
     "new_item": "NOVO ITEM",

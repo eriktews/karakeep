@@ -988,7 +988,8 @@
     "crawling_in_progress": "Dohvaćam sadržaj stranice…",
     "continue_reading": "Nastavi gdje si stao",
     "continue_reading_percent": "Nastavi gdje si stao ({{percent}}%)",
-    "continue_button": "Nastavi"
+    "continue_button": "Nastavi",
+    "similar_articles": "Slični članci"
   },
   "editor": {
     "import_as_text": "Uvoz kao tekstualnu oznaku",

@@ -1045,7 +1045,8 @@
     "crawling_in_progress": "Noudetaan sivun sisältöä…",
     "continue_reading": "Jatka siitä, mihin jäit",
     "continue_reading_percent": "Jatka siitä, mihin jäit ({{percent}} %)",
-    "continue_button": "Jatka"
+    "continue_button": "Jatka",
+    "similar_articles": "Samankaltaiset artikkelit"
   },
   "editor": {
     "multiple_urls_dialog_title": "Tuodaanko URL-osoitteet erillisinä kirjanmerkkeinä?",

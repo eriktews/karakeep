@@ -1045,7 +1045,8 @@
     "crawling_in_progress": "Λήψη περιεχομένου σελίδας…",
     "continue_reading": "Συνεχίστε από εκεί που σταματήσατε",
     "continue_reading_percent": "Συνεχίστε από εκεί που σταματήσατε ({{percent}}%)",
-    "continue_button": "Συνεχίστε"
+    "continue_button": "Συνεχίστε",
+    "similar_articles": "Παρόμοια άρθρα"
   },
   "editor": {
     "multiple_urls_dialog_title": "Εισαγωγή URLs ως Ξεχωριστών Σελιδοδεικτών;",

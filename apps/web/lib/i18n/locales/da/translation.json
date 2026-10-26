@@ -1036,7 +1036,8 @@
     "crawling_in_progress": "Henter sideindhold…",
     "continue_reading": "Fortsæt, hvor du slap",
     "continue_reading_percent": "Fortsæt, hvor du slap ({{percent}}%)",
-    "continue_button": "Fortsæt"
+    "continue_button": "Fortsæt",
+    "similar_articles": "Lignende artikler"
   },
   "toasts": {
     "bookmarks": {

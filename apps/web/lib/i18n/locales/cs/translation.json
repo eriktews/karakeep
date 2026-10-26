@@ -1153,7 +1153,8 @@
     "crawling_in_progress": "Načítám obsah stránky…",
     "continue_reading": "Pokračuj tam, kde jsi skončil",
     "continue_reading_percent": "Pokračuj tam, kde jsi skončil ({{percent}} %)",
-    "continue_button": "Pokračovat"
+    "continue_button": "Pokračovat",
+    "similar_articles": "Podobné články"
   },
   "dialogs": {
     "bookmarks": {

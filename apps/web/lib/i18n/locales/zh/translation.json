@@ -974,7 +974,8 @@
     "crawling_in_progress": "正在获取页面内容……",
     "continue_reading": "从上次结束的地方继续",
     "continue_reading_percent": "从上次结束的地方继续（{{percent}}%）",
-    "continue_button": "继续"
+    "continue_button": "继续",
+    "similar_articles": "相似文章"
   },
   "editor": {
     "multiple_urls_dialog_title": "将URL导入为单独的书签？",

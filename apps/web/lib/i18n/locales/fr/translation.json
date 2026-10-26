@@ -985,7 +985,8 @@
     "crawling_in_progress": "Récupération du contenu de la page…",
     "continue_reading": "Continuez là où vous vous êtes arrêté",
     "continue_reading_percent": "Continuez là où vous vous êtes arrêté ({{percent}} %)",
-    "continue_button": "Continuer"
+    "continue_button": "Continuer",
+    "similar_articles": "Articles similaires"
   },
   "editor": {
     "multiple_urls_dialog_title": "Importer les URLs comme favoris séparés ?",

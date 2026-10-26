@@ -42,6 +42,7 @@ import AttachmentBox from "./AttachmentBox";
 import HighlightsBox from "./HighlightsBox";
 import LinkContentSection from "./LinkContentSection";
 import { NoteEditor } from "./NoteEditor";
+import SimilarBookmarksBox from "./SimilarBookmarksBox";
 import { TextContentSection } from "./TextContentSection";
 
 function ContentLoading() {
@@ -226,6 +227,11 @@ export default function BookmarkPreview({
       <Separator />
       <AttachmentBox bookmark={bookmark} readOnly={!isOwner} />
       <HighlightsBox bookmarkId={bookmark.id} readOnly={!isOwner} />
+      <SimilarBookmarksBox
+        bookmarkId={bookmark.id}
+        isOwner={isOwner}
+        variant="sidebar"
+      />
       <Separator />
       {isOwner && <ActionBar bookmark={bookmark} />}
     </div>

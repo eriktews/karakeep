@@ -43,6 +43,7 @@ import { contentRendererRegistry } from "./content-renderers";
 import ReaderSettingsPopover from "./ReaderSettingsPopover";
 import ReaderView from "./ReaderView";
 import SavedPageOverview from "./SavedPageOverview";
+import SimilarBookmarksBox from "./SimilarBookmarksBox";
 
 function CustomRendererErrorFallback({ error }: { error: Error }) {
   return (
@@ -170,6 +171,15 @@ export default function LinkContentSection({
           bookmarkId={bookmark.id}
           readOnly={!isOwner}
         />
+        {isOwner && (
+          <div className="mx-auto mb-6 mt-10 max-w-3xl border-t pt-6 print:hidden">
+            <SimilarBookmarksBox
+              bookmarkId={bookmark.id}
+              isOwner={isOwner}
+              variant="reader"
+            />
+          </div>
+        )}
       </div>
     );
   } else if (section === "archive") {

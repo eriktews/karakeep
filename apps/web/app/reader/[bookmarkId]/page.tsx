@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import HighlightCard from "@/components/dashboard/highlights/HighlightCard";
 import ReaderSettingsPopover from "@/components/dashboard/preview/ReaderSettingsPopover";
 import ReaderView from "@/components/dashboard/preview/ReaderView";
+import SimilarBookmarksBox from "@/components/dashboard/preview/SimilarBookmarksBox";
 import { Button } from "@/components/ui/button";
 import { FullPageSpinner } from "@/components/ui/full-page-spinner";
 import { Separator } from "@/components/ui/separator";
@@ -139,6 +140,16 @@ export default function ReaderViewPage() {
                     />
                   </div>
                 </Suspense>
+
+                {isOwner && (
+                  <div className="mt-10 border-t pt-6 print:hidden">
+                    <SimilarBookmarksBox
+                      bookmarkId={bookmarkId}
+                      isOwner={isOwner}
+                      variant="reader"
+                    />
+                  </div>
+                )}
               </>
             ) : (
               <FullPageSpinner />
