@@ -118,13 +118,12 @@ function PDFSection({ link }: { link: ZBookmarkedLink }) {
   );
 }
 
-export default function LinkContentSection({
-  bookmark,
-}: {
-  bookmark: ZBookmark;
-}) {
-  const { t } = useTranslation();
-  const { settings } = useReaderSettings();
+/**
+ * The content section a link bookmark opens with, shared with BookmarkPreview
+ * so both components agree on the effective section when the URL carries no
+ * `section` param.
+ */
+export function getDefaultLinkSection(bookmark: ZBookmark): string {
   const availableRenderers = contentRendererRegistry.getRenderers(bookmark);
   let defaultSection = availableRenderers[0]?.id ?? "cached";
   if (
@@ -137,6 +136,18 @@ export default function LinkContentSection({
       defaultSection = "overview";
     }
   }
+  return defaultSection;
+}
+
+export default function LinkContentSection({
+  bookmark,
+}: {
+  bookmark: ZBookmark;
+}) {
+  const { t } = useTranslation();
+  const { settings } = useReaderSettings();
+  const availableRenderers = contentRendererRegistry.getRenderers(bookmark);
+  const defaultSection = getDefaultLinkSection(bookmark);
   const [section, setSection] = useQueryState("section", {
     defaultValue: defaultSection,
   });
