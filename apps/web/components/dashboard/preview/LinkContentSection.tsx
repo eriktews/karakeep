@@ -43,7 +43,6 @@ import { contentRendererRegistry } from "./content-renderers";
 import ReaderSettingsPopover from "./ReaderSettingsPopover";
 import ReaderView from "./ReaderView";
 import SavedPageOverview from "./SavedPageOverview";
-import SimilarBookmarksBox from "./SimilarBookmarksBox";
 
 function CustomRendererErrorFallback({ error }: { error: Error }) {
   return (
@@ -119,11 +118,10 @@ function PDFSection({ link }: { link: ZBookmarkedLink }) {
 }
 
 /**
- * The content section a link bookmark opens with, shared with BookmarkPreview
- * so both components agree on the effective section when the URL carries no
- * `section` param.
+ * The content section a link bookmark opens with (preferred preview or the
+ * first available custom renderer).
  */
-export function getDefaultLinkSection(bookmark: ZBookmark): string {
+function getDefaultLinkSection(bookmark: ZBookmark): string {
   const availableRenderers = contentRendererRegistry.getRenderers(bookmark);
   let defaultSection = availableRenderers[0]?.id ?? "cached";
   if (
@@ -182,15 +180,6 @@ export default function LinkContentSection({
           bookmarkId={bookmark.id}
           readOnly={!isOwner}
         />
-        {isOwner && (
-          <div className="mx-auto mb-6 mt-10 max-w-3xl border-t pt-6 print:hidden">
-            <SimilarBookmarksBox
-              bookmarkId={bookmark.id}
-              isOwner={isOwner}
-              variant="reader"
-            />
-          </div>
-        )}
       </div>
     );
   } else if (section === "archive") {

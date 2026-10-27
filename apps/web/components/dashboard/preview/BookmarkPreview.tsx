@@ -36,15 +36,12 @@ import {
 } from "@karakeep/shared/utils/bookmarkUtils";
 
 import SummarizeBookmarkArea from "../bookmarks/SummarizeBookmarkArea";
-import { useQueryState } from "nuqs";
 
 import ActionBar from "./ActionBar";
 import { AssetContentSection } from "./AssetContentSection";
 import AttachmentBox from "./AttachmentBox";
 import HighlightsBox from "./HighlightsBox";
-import LinkContentSection, {
-  getDefaultLinkSection,
-} from "./LinkContentSection";
+import LinkContentSection from "./LinkContentSection";
 import { NoteEditor } from "./NoteEditor";
 import SimilarBookmarksBox from "./SimilarBookmarksBox";
 import { TextContentSection } from "./TextContentSection";
@@ -161,27 +158,12 @@ export default function BookmarkPreview({
     ),
   );
 
-  // The effective content section for link bookmarks (only relevant there).
-  // The reader section renders the similar-articles box in-content, so the
-  // sidebar box is hidden in that case to avoid showing the carousel twice.
-  const [linkSection] = useQueryState("section", {
-    defaultValue:
-      bookmark?.content.type === BookmarkTypes.LINK
-        ? getDefaultLinkSection(bookmark)
-        : "not-a-link",
-  });
-
   if (!bookmark) {
     return <FullPageSpinner />;
   }
 
   // Check if the current user owns this bookmark
   const isOwner = session?.user?.id === bookmark.userId;
-
-  // The reader section renders the similar-articles box in-content, so the
-  // sidebar box is hidden in that case to avoid showing the carousel twice.
-  const showSidebarSimilarBookmarks =
-    bookmark.content.type !== BookmarkTypes.LINK || linkSection !== "cached";
 
   let content;
   switch (bookmark.content.type) {
@@ -246,13 +228,11 @@ export default function BookmarkPreview({
       <Separator />
       <AttachmentBox bookmark={bookmark} readOnly={!isOwner} />
       <HighlightsBox bookmarkId={bookmark.id} readOnly={!isOwner} />
-      {showSidebarSimilarBookmarks && (
-        <SimilarBookmarksBox
-          bookmarkId={bookmark.id}
-          isOwner={isOwner}
-          variant="sidebar"
-        />
-      )}
+      <SimilarBookmarksBox
+        bookmarkId={bookmark.id}
+        isOwner={isOwner}
+        variant="list"
+      />
       <Separator />
       {isOwner && <ActionBar bookmark={bookmark} />}
     </div>
