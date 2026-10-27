@@ -41,11 +41,11 @@ export default function ReaderViewPage() {
   const isOwner = session?.user?.id === bookmark?.userId;
 
   const onClose = () => {
-    if (window.history.length > 1) {
-      router.back();
-    } else {
-      router.push("/dashboard");
-    }
+    // Closing the reader returns to the bookmark's regular view — even when
+    // the user browsed through several articles via the related-articles
+    // grid first. `replace` keeps the closed reader out of the history so
+    // the browser's back button skips it.
+    router.replace(`/dashboard/preview/${bookmarkId}`);
   };
 
   const handlePrint = () => {
