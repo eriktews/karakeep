@@ -1054,7 +1054,8 @@
     "continue_reading_percent": "Continue de onde parou ({{percent}}%)",
     "continue_button": "Continuar",
     "similar_articles": "Artigos semelhantes",
-    "similar_articles_show_all": "Mostrar tudo"
+    "similar_articles_show_all": "Mostrar tudo",
+    "similar_articles_show_less": "Mostrar menos"
   },
   "editor": {
     "multiple_urls_dialog_title": "Importando URLs como favoritos separados?",

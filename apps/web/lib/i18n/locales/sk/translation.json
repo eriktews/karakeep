@@ -1116,7 +1116,8 @@
     "continue_reading_percent": "Pokračovať tam, kde si prestal ({{percent}} %)",
     "continue_button": "Pokračovať",
     "similar_articles": "Podobné články",
-    "similar_articles_show_all": "Zobraziť všetko"
+    "similar_articles_show_all": "Zobraziť všetko",
+    "similar_articles_show_less": "Zobraziť menej"
   },
   "toasts": {
     "bookmarks": {

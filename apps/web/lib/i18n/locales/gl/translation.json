@@ -1016,7 +1016,8 @@
     "continue_reading_percent": "Continúa onde o deixaches ({{percent}}%)",
     "continue_button": "Continúa",
     "similar_articles": "Artigos similares",
-    "similar_articles_show_all": "Amosar todo"
+    "similar_articles_show_all": "Amosar todo",
+    "similar_articles_show_less": "Amosar menos"
   },
   "editor": {
     "multiple_urls_dialog_title": "¿Importar URLs como marcadores independentes?",
